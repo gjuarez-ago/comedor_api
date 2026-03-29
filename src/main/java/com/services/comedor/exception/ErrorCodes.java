@@ -9,13 +9,14 @@ public final class ErrorCodes {
     // ============================================
     // CÓDIGOS DE ERROR (Para el Frontend / App)
     // ============================================
-
     // 🔐 Errores de Autenticación (AUTH-XXX)
     public static final String AUTH_NOT_FOUND = "AUTH-001";
     public static final String AUTH_SUSPENDED = "AUTH-002";
     public static final String AUTH_INVALID_PIN = "AUTH-003";
     public static final String AUTH_UNAUTHORIZED_LOCATION = "AUTH-004"; // Intenta loguearse en otro comedor
     public static final String AUTH_INVALID_SUPERVISOR = "AUTH-005"; // PIN de jefe inválido
+    private static final String ERROR_SIN_PEDIDO_ACTIVO = "CON_012";
+    private static final String ERROR_PEDIDO_YA_PROCESADO = "CON_013";
 
     // 👥 Errores de Empleado (EMP-XXX)
     public static final String EMP_NOT_FOUND = "EMP-001";
@@ -39,11 +40,9 @@ public final class ErrorCodes {
     public static final String FLOW_INVALID_TRANSITION = "FLOW-001"; // Ej: Pasar a ENTREGADO sin estar LISTO
     public static final String FLOW_CANNOT_CANCEL = "FLOW-002"; // Ya se entregó, no se puede cancelar
 
-
     // ============================================
     // MENSAJES DESCRIPTIVOS (Para Logs o Mostrar al Usuario)
     // ============================================
-
     // Autenticación
     public static final String MSG_AUTH_NOT_FOUND = "Usuario o número de empleado no encontrado.";
     public static final String MSG_AUTH_SUSPENDED = "Cuenta suspendida. Acude a Recursos Humanos.";

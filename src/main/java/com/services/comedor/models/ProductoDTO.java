@@ -2,6 +2,9 @@ package com.services.comedor.models;
 
 import java.util.Set;
 
+import lombok.Builder;
+
+@Builder 
 public record ProductoDTO(
         Long id,
         String nombre,
